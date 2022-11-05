@@ -11,7 +11,7 @@ const port = 3000
 
 const mongoose = require('mongoose')
 
-const url = `mongodb://hemanth:1234567890@ac-xnspcon-shard-00-00.4kzlic5.mongodb.net:27017,ac-xnspcon-shard-00-01.4kzlic5.mongodb.net:27017,ac-xnspcon-shard-00-02.4kzlic5.mongodb.net:27017/?ssl=true&replicaSet=atlas-i3kylc-shard-0&authSource=admin&retryWrites=true&w=majority`;
+const url = `mongodb://<user name>:<password>@ac-xnspcon-shard-00-00.4kzlic5.mongodb.net:27017,ac-xnspcon-shard-00-01.4kzlic5.mongodb.net:27017,ac-xnspcon-shard-00-02.4kzlic5.mongodb.net:27017/?ssl=true&replicaSet=atlas-i3kylc-shard-0&authSource=admin&retryWrites=true&w=majority`;
 
 mongoose.connect(url)
     .then(() => {
