@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-Up</title>
+    <link rel="stylesheet" href="./css/sign-up.css">
+</head>
+<body>
+    <div class="login-box">
+        <h2>Sign Up</h2>
+        <form method="post" action="/">
+          <div class="user-box">
+            <input type="text" class="username" placeholder="                                                  Epashudhan" id="username" name="username" required="">
+            <label>Username</label>
+          </div>
+          <div class="user-box">
+            <input type="text" class="gmail" placeholder="                              epashudhan@gmail.com" id="email" name="email" required="">
+            <label>G-mail</label>
+          </div>
+          <div class="user-box">
+            <input type="number" class="phonenumber" placeholder="                                                   9876543210" id="contact" name="contact" required="">
+            <label>Contact Number</label>
+          </div>
+          <div class="user-box">
+            <input type="password" class="password" placeholder="                                              enter password" id="password" name="password" required="">
+            <label>Password</label>
+          </div>
+          <div class="user-box">
+            <input type="password" class="confirmpassword" placeholder="                                         confirm-password" id="password2"  name="confirmpassword" required="">
+            <label>confirm-Password</label>
+          </div>
+          <button class="custom-btn btn-5"><span>Sign Up</span></button>
+            <script>
+              document.querySelector('.button').onclick = function(){
+                var password = document.querySelector('.password').value,
+                confirmpassword = document.querySelector('.confirmpassword').value;
+                var phonenumber = document.querySelector('.phonenumber').value;
+                var username = document.querySelector('.username').value;
+                var gmail = document.querySelector('.gmail').value;
+                
+                if(username=="")
+                {
+                  alert("User name must be provided");
+                }
+                if(gmail=="")
+                {
+                  alert("Invalid G-Mail id");
+                }
+                if(phonenumber<6000000000)
+                {
+                  alert("phone number must contain 10 Numbers!.Enter valid number");
+                }
+                 else if (phonenumber>999999999999999999999)
+                {
+                  alert("phone number must contain 10 Numbers!.Enter valid number");
+                }
+                if(password=="")
+                {
+                  alert("Password must contain characters!");
+                }
+                else if(password != confirmpassword)
+                {
+                  alert("Password Does't match.Please try again!");
+                }
+              }
+              </script>
+          </a>
+          </form>
+      </div>
+  </body>
+</html>
